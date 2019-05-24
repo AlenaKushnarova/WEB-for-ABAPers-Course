@@ -1,0 +1,37 @@
+#container {
+
+    border: black 3px solid;
+    height: 98%;
+    width: 31.7%;
+    background-color: white;
+}
+
+#redF {
+
+    background-color: red;
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 200px;
+    width: 200px;
+}
+
+
+#blueF {
+
+    background-color: blue;
+    margin-top: -110px;
+    margin-left: 200px;
+    height: 200px;
+    width: 200px;
+}
+
+#limeF {
+
+    position: relative;
+    z-index: 10000;
+    background-color: lime;
+    margin-top: -110px;
+    margin-left: 100px;
+    height: 200px;
+    width: 200px;
+}
