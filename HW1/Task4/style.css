@@ -1,0 +1,101 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+.flex-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.Fugure{
+    padding: 4rem;
+    border: 3px solid gray;
+    margin: 6px;   
+}
+
+#Red {
+    background-color: red;
+    height: 1%;
+    flex: 30%;
+}
+
+#Orange {
+    background-color: orangered;
+    height: 1%;
+    flex: 50%;
+}
+
+#Green {
+    background-color:LimeGreen;
+    height: 40%;
+    flex: 100%;
+    margin-top: 1%;
+}
+
+#Brown {
+    background-color: Maroon;
+    height: 10%;
+    flex: 25%;
+}
+
+#Blue {
+    background-color: rgb(0, 4, 255);
+    height: 10%;
+    flex: 25%;
+}
+
+#Violet {
+    background-color: rgb(194, 12, 194);
+    height: 10%;
+    flex: 25%;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    #Brown, #Blue, #Orange{
+        display: none;
+    }
+    #Green{
+        order: 1;
+        height: 2%;
+    }
+    #Violet{
+        margin-top: 3%;
+        margin-bottom: 0.5px; 
+        order: 2;
+        height: 2%;
+    }
+    #Red{
+        margin-top: 0.5px;
+        order:3;
+        height: 30%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    #Brown{
+        display: none;
+    }
+    #Orange{
+        order: 1;
+        flex: 10%;
+    }
+    #Violet{
+        order: 2;
+        flex: 10%;
+        height: 1%;
+    }
+    #Red{
+        order: 3;
+        height: 40%;
+        flex:100%;
+    }
+    #Green{
+        order: 4;
+        flex:30%;
+        height: 20%;
+    }
+    #Blue{
+        order: 5;
+        flex: 30%;
+        height: 20%;
+    }
+}
