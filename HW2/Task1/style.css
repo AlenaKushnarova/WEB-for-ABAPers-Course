@@ -1,0 +1,39 @@
+html,
+body {
+    background: rgba(220, 247, 233, 1.00);
+}
+
+#cl_btn {
+    width: 100%;
+    
+}
+
+#btn1 {
+    width: 50%;
+    font-weight: bold; 
+}
+
+#btn2 {
+    width: 50%;
+    float: right;
+    font-weight: bold;
+}
+#btn3 {
+    width: 100%;
+    font-weight: bold;
+}
+h2 {
+   margin-top: 20px;  
+   color: LimeGreen; 
+   text-align: center;
+}; 
+
+h3 {
+    background-color: Chocolate;
+    text-align: center;
+}
+
+p {
+    background-color: Olive;
+    color: Aliceblue;
+}

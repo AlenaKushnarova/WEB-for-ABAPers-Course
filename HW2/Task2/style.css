@@ -1,0 +1,14 @@
+html,
+body {
+    background: white url(https://thumbs.dreamstime.com/z/olika-bakgrundsbilder-tapet-papper-cloth-x-95754417.jpg) repeat top left;
+}
+
+
+h3 {
+text-align: center;
+color: green;
+}
+
+#modalRegisterForm {
+  background-color: honeydew;  
+}
