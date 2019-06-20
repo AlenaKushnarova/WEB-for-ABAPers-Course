@@ -20,7 +20,7 @@ function onCreate(ev) {
         }
     });
 
-  //The real IP adress was hidden for safety
+  //The real IP adress was replace for safety
     xhr.open("POST", "http://IP adress:2403/books5kush");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(data);
@@ -46,7 +46,7 @@ function onRead() {
         }
     });
 
-    //The real IP adress was hidden for safety
+    //The real IP adress was replace for safety
     xhr.open("GET", "http://IP adress:2403/books5kush");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send();
@@ -73,7 +73,7 @@ function onPrepareUpdate(ev) {
             ids.id = 'uid';
         }
     });
-    //The real IP adress was hidden for safety
+    //The real IP adress was replace for safety
     xhrids.open("GET", "http://IP adress:2403/books5kush/");
     xhrids.setRequestHeader("Content-Type", "application/json");
     xhrids.send();
@@ -99,7 +99,7 @@ function onUpdate(ev) {
         }
     });
 
-    //The real IP adress was hidden for safety
+    //The real IP adress was replace for safety
     xhr.open("PUT", "http://IP adress:2403/books5kush/" + document.getElementById("uid").value);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(data);
@@ -116,7 +116,7 @@ function onDelete(ev) {
         }
     });
 
-    //The real IP adress was hidden for safety
+    //The real IP adress was replace for safety
     xhr.open("DELETE", "http://IP adress/books5kush/" + document.getElementById("did").value);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send();
