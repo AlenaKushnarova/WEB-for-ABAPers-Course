@@ -1,12 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <title>Task 1 HW5</title>
+        
+        <script src="./index.js"></script>
     
+        <script type="text/javascript" src="myscript.js"></script>
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </head>
+    
+<body>
+     <h1>The real IP adress was replaced in code for safety!!! Enter real IP adress for correct work of app!!!</h1>
+    <!-- Form for creation books -->
+    <!-- <form name="books5kush"> -->
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        Create
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <form id='createForm'>
+                        <div class="form-group">
+                            <label for="ctitle">Book name</label>
+                            <input type="text" class="form-control" id="ctitle" aria-describedby="emailHelp"
+                                placeholder="Enter book name">
+                        </div>
+                        <div class="form-group">
+                            <label for="cauthor">Author</label>
+                            <input type="text" class="form-control" id="cauthor" placeholder="Enter author">
+                        </div>
+                        <div class="form-group">
+                            <label for="cnumberOfPages">Number Of Pages</label>
+                            <input type="number" min=1 class="form-control" id="cnumberOfPages"
+                                placeholder="Enter number of pages">
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="cdataCarrier1"
+                                name="cgroupOfDefaultRadios" value="CD">
+                            <label class="custom-control-label" for="cdataCarrier1">Audiobook</label>
+                        </div>
+
+                        <!-- Group of default radios - option 2 -->
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="cdataCarrier2"
+                                name="cgroupOfDefaultRadios" value="Paper" checked>
+                            <label class="custom-control-label" for="cdataCarrier2">Textbook</label>
+                        </div>
+
+                        <button type="submit" id='cbutton' class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button id='rbutton' class="btn btn-success collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Read
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Book name</th>
+                                <th scope="col">Author</th>
+                                <th scope="col">Number Of Pages</th>
+                                <th scope="col">Data Carrier</th>
+                            </tr>
+                        </thead>
+                        <tbody id='rTBody'>
+                            <!--  <tr>
+                                <th scope="row">1</th>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr> -->
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button id='pubutton' class="btn btn-primary collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Update
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <form id='updateForm'>
+                        <div class="form-group">
+                            <label for="uid">ID</label>
+                            <select id="uid" class="form-control">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="utitle">Book name</label>
+                            <input type="text" class="form-control" id="utitle" placeholder="Enter book name">
+                        </div>
+                        <div class="form-group">
+                            <label for="uauthor">Author</label>
+                            <input type="text" class="form-control" id="uauthor" placeholder="Enter author name">
+                        </div>
+                        <div class="form-group">
+                            <label for="unumberOfPages">Number Of Pages</label>
+                            <input type="number" min=1 class="form-control" id="unumberOfPages"
+                                placeholder="Enter number of pages">
+                        </div>
+                        <!-- Group of default radios - option 1 -->
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="udataCarrier1"
+                                name="ugroupOfDefaultRadios" value="CD">
+                            <label class="custom-control-label" for="udataCarrier1">Audiobook</label>
+                        </div>
+
+                        <!-- Group of default radios - option 2 -->
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="udataCarrier2"
+                                name="ugroupOfDefaultRadios" value="Paper" checked>
+                            <label class="custom-control-label" for="udataCarrier2">Textbook</label>
+                        </div>
+
+                        <button type="submit" id='ubutton' class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button class="btn btn-danger collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Delete
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                    <form id='deleteForm'>
+                        <div class="form-group">
+                            <label for="did">ID</label>
+                            <input type="text" class="form-control" id="did" placeholder="Enter ID">
+                        </div>
+                        <button type="submit" id='dbutton' class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>   
 </body>
 </html>

@@ -1,9 +1,9 @@
 function onCreate(ev) {
     ev.preventDefault();
     
-    var radioValue = $("input[name='cgroupOfDefaultRadios']:checked").val();
+    let radioValue = $("input[name='cgroupOfDefaultRadios']:checked").val();
 
-    var data = JSON.stringify({
+    let data = JSON.stringify({
         "title": String(document.getElementById("ctitle").value),
         "author": String(document.getElementById("cauthor").value),
         "numberOfPages": String(document.getElementById("cnumberOfPages").value),
@@ -21,7 +21,7 @@ function onCreate(ev) {
     });
 
   //The real IP adress was replaced for safety
-    xhr.open("POST", "http://IP adress:2403/books5kush");
+    xhr.open("POST", "http://IP Addres:2403/books5kush");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(data);
 }
@@ -34,12 +34,12 @@ function onRead() {
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
              result = JSON.parse(this.response);
-            var resultTBody = document.createElement('tbody');
+            let resultTBody = document.createElement('tbody');
             result.map(function (nthBOOKS5KUSH) {
                 resultTBody.appendChild(parseBookToTableRow(nthBOOKS5KUSH));
             });
 
-            var table = document.getElementById('rTBody').parentElement;
+            let table = document.getElementById('rTBody').parentElement;
             table.replaceChild(resultTBody, document.getElementById('rTBody'));
             resultTBody.id = 'rTBody';
             console.log('success');
@@ -47,7 +47,7 @@ function onRead() {
     });
 
     //The real IP adress was replaced for safety
-    xhr.open("GET", "http://IP adress:2403/books5kush");
+    xhr.open("GET", "http://IP Addres:2403/books5kush");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send();
 }
@@ -61,20 +61,20 @@ function onPrepareUpdate(ev) {
     xhrids.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
             result = JSON.parse(this.response);
-            var ids = document.createElement('select');
+            let ids = document.createElement('select');
             ids.className = 'form-control';
             result.map(function (nthBOOKS5KUSH) {
-                var id = document.createElement('option');
+                let id = document.createElement('option');
                 id.innerHTML = nthBOOKS5KUSH['id'];
                 ids.appendChild(id);
             });
-            var form = document.getElementById('uid').parentElement;
+            let form = document.getElementById('uid').parentElement;
             form.replaceChild(ids, document.getElementById('uid'));
             ids.id = 'uid';
         }
     });
     //The real IP adress was replaced for safety
-    xhrids.open("GET", "http://IP adress:2403/books5kush/");
+    xhrids.open("GET", "http://IP Addres:2403/books5kush/");
     xhrids.setRequestHeader("Content-Type", "application/json");
     xhrids.send();
 }
@@ -82,8 +82,8 @@ function onPrepareUpdate(ev) {
 function onUpdate(ev) {
     ev.preventDefault();
 
-    var uradioValue = $("input[name='ugroupOfDefaultRadios']:checked").val();
-    var data = JSON.stringify({
+    let uradioValue = $("input[name='ugroupOfDefaultRadios']:checked").val();
+    let data = JSON.stringify({
         "title": String(document.getElementById("utitle").value),
         "author": String(document.getElementById("uauthor").value),
         "numberOfPages": String(document.getElementById("unumberOfPages").value),
@@ -100,7 +100,7 @@ function onUpdate(ev) {
     });
 
     //The real IP adress was replaced for safety
-    xhr.open("PUT", "http://IP adress:2403/books5kush/" + document.getElementById("uid").value);
+    xhr.open("PUT", "http://IP Addres:2403/books5kush/" + document.getElementById("uid").value);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(data);
 }
@@ -117,13 +117,13 @@ function onDelete(ev) {
     });
 
     //The real IP adress was replaced for safety
-    xhr.open("DELETE", "http://IP adress:2403/books5kush/" + document.getElementById("did").value);
+    xhr.open("DELETE", "http://IP Addres:2403/books5kush/" + document.getElementById("did").value);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send();
 }
 
 function parseBookToTableRow(BOOKS5KUSH) {
-    var row = document.createElement('tr');
+    let row = document.createElement('tr');
 
     id = document.createElement('th');
     id.innerText = BOOKS5KUSH['id'];
